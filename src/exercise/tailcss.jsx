@@ -1,14 +1,29 @@
+import { useState } from "react";
+
 export default function Tail() {
+  const [open, setOpen] = useState(true);
+  function tuggle() {
+    setOpen((prev) => !prev);
+  }
   return (
     <>
-      <main>
-        <div className="flex  bg-slate-900 h-screen w-full">
-          <aside className=" flex flex-col gap-5 w-50 h-full bg-slate-700 border-r  border-slate-300">
-            <div className="h-8 w-8 bg-rose-400  rounded ml-6 mt-2  "></div>
-            <div className="h-8 w-45 bg-slate-500  rounded self-center flex px-2 items-center mt-4 ">
+      <main className="">
+        <div className="flex  bg-slate-900 h-screen w-full justify-between">
+          <aside
+            className={`flex flex-col gap-5  h-full bg-slate-700 border-r  border-slate-300 ${open ? "w-50" : "w-30"}`}
+          >
+            <button
+              className="h-8 w-8 bg-rose-400  rounded ml-6 mt-2"
+              onClick={tuggle}
+            ></button>
+            <div
+              className={`h-8  bg-slate-500  rounded self-center flex px-2 items-center mt-4 ${open ? "w-45" : "w-20"}`}
+            >
               <div className="h-4 w-20 bg-slate-400  rounded  "></div>
             </div>
-            <div className="h-4 w-20 bg-blue-400  rounded ml-5 "></div>
+            <div
+              className={`h-4 bg-blue-400  rounded ml-5 ${open ? "w-20" : "w-4"}`}
+            ></div>
             <div className="h-4 w-20 bg-rose-400  rounded ml-5  "></div>
             <div className="h-4 w-20 bg-green-400  rounded ml-8  "></div>
             <div className="h-4 w-20 bg-orange-400  rounded ml-4  "></div>
@@ -17,7 +32,7 @@ export default function Tail() {
             <div className="h-4 w-28 bg-slate-500  rounded ml-4  "></div>
             <div className="h-4 w-20 bg-slate-500  rounded ml-4  "></div>
           </aside>
-          <section className="flex flex-col gap-4">
+          <section className="flex flex-1 flex-col gap-4 ">
             <header className="h-14 w-292 border-b border-slate-300 bg-slate-700  flex items-center flex-wrap justify-between ">
               <div className="h-8 w-70 bg-slate-400 ml-5 rounded "></div>
               <div className="flex items-center gap-3 mr-5">
