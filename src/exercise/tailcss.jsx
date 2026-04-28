@@ -8,7 +8,7 @@ export default function Tail() {
   return (
     <>
       <main className="">
-        <div className="flex  bg-slate-900 h-screen w-full justify-between">
+        <div className="flex  bg-slate-800 h-screen w-full justify-between">
           <aside
             className={`flex flex-col gap-5  h-full bg-slate-700 border-r  border-slate-300 ${open ? "w-50" : "w-30"}`}
           >
