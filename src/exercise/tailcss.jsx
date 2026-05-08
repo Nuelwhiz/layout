@@ -21,7 +21,7 @@ export default function Tail() {
               className={`h-8  bg-slate-500  rounded self-center flex px-2 items-center mt-4 ${open ? "w-45" : "w-15"}`}
             >
               <div
-                className={`h-4 w-20 bg-slate-400  rounded ${open ? "w-20" : ""}  `}
+                className={`h-4 w-20 bg-slate-400  rounded ${open ? "block" : "hidden"}  `}
               ></div>
             </div>
             <div
